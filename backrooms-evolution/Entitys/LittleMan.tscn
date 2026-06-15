@@ -1,3 +1,19 @@
 [gd_scene format=3 uid="uid://c0vqlkxoganly"]
 
-[node name="LittleMan" type="Node2D" unique_id=1511191073]
+[ext_resource type="Script" path="res://Entitys/LittleMan.gd" id="1_littleman"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_littleman"]
+size = Vector2(32, 32)
+
+[node name="LittleMan" type="CharacterBody2D" unique_id=1511191073]
+script = ExtResource("1_littleman")
+
+[node name="Visual" type="ColorRect" parent="."]
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+color = Color(0.2, 0.8, 0.4, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_littleman")
