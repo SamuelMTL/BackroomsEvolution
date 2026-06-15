@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="EntityData" format=3]
+
+[ext_resource type="Script" path="res://Resources/EntityData.gd" id="1_entitydata"]
+
+[resource]
+script = ExtResource("1_entitydata")
+type_name = "Sprout"
+color = Color(0.2, 0.8, 0.4, 1)
+speed = 120.0

@@ -5,7 +5,12 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_littleman"]
 size = Vector2(64, 64)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_merge"]
+radius = 36.0
+
 [node name="LittleMan" type="CharacterBody2D" unique_id=1511191073]
+collision_layer = 2
+collision_mask = 1
 script = ExtResource("1_littleman")
 
 [node name="Visual" type="ColorRect" parent="."]
@@ -17,3 +22,12 @@ color = Color(0.2, 0.8, 0.4, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_littleman")
+
+[node name="MergeArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+monitoring = true
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MergeArea"]
+shape = SubResource("CircleShape2D_merge")

@@ -15,6 +15,7 @@ func _ready() -> void:
 
 func _on_spawn_timer_timeout() -> void:
 	var little_man := LittleMan.instantiate()
+	little_man.entity_data = EntityRegistry.get_starting_type()
 	little_man.position = Vector2(
 		randf_range(SPAWN_AREA.position.x, SPAWN_AREA.end.x),
 		randf_range(SPAWN_AREA.position.y, SPAWN_AREA.end.y)

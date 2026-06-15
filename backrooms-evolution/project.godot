@@ -8,6 +8,10 @@
 
 config_version=5
 
+[autoload]
+
+EntityRegistry="*res://Autoloads/EntityRegistry.gd"
+
 [application]
 
 config/name="Backrooms Evolution"
