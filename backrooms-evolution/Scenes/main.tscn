@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://qgvxnmfm1hm2"]
 
-[ext_resource type="PackedScene" uid="uid://c0vqlkxoganly" path="res://Entitys/LittleMan.tscn" id="1_littleman"]
+[ext_resource type="Script" uid="uid://bjh4dhrgp3myu" path="res://Scenes/main.gd" id="1_main_script"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7dm0k"]
 size = Vector2(1095, 122)
@@ -21,6 +21,7 @@ size = Vector2(136, 1919)
 size = Vector2(136, 1919)
 
 [node name="Main" type="Node2D" unique_id=965926756]
+script = ExtResource("1_main_script")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=276742492]
 anchors_preset = 15
@@ -114,27 +115,34 @@ position = Vector2(956, 0)
 position = Vector2(64, 954)
 shape = SubResource("RectangleShape2D_ig7tw")
 
-[node name="WallTop" type="StaticBody2D" parent="."]
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WallTop"]
+[node name="WallTop" type="StaticBody2D" parent="." unique_id=855412549]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallTop" unique_id=79405700]
 position = Vector2(543, 61)
 shape = SubResource("RectangleShape2D_wall_top")
 
-[node name="WallBottom" type="StaticBody2D" parent="."]
+[node name="WallBottom" type="StaticBody2D" parent="." unique_id=267419616]
 position = Vector2(0, 1804)
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WallBottom"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallBottom" unique_id=6745497]
 position = Vector2(546, 60)
 shape = SubResource("RectangleShape2D_wall_bottom")
 
-[node name="WallLeft" type="StaticBody2D" parent="."]
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WallLeft"]
+[node name="WallLeft" type="StaticBody2D" parent="." unique_id=1609643126]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallLeft" unique_id=835770046]
 position = Vector2(68, 959)
 shape = SubResource("RectangleShape2D_wall_left")
 
-[node name="WallRight" type="StaticBody2D" parent="."]
+[node name="WallRight" type="StaticBody2D" parent="." unique_id=1772958013]
 position = Vector2(950, 0)
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight" unique_id=1701832202]
 position = Vector2(68, 959)
 shape = SubResource("RectangleShape2D_wall_right")
 
-[node name="LittleMan" type="CharacterBody2D" parent="." instance=ExtResource("1_littleman")]
-position = Vector2(543, 900)
+[node name="SpawnTimer" type="Timer" parent="." unique_id=1211944361]
+wait_time = 3.0
+autostart = true
+
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
