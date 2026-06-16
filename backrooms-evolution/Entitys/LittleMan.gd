@@ -8,6 +8,7 @@ var _dragging := false
 var _drag_offset := Vector2.ZERO
 var _merging := false
 
+@onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var visual: ColorRect = $Visual
 @onready var merge_area: Area2D = $MergeArea
 
@@ -20,7 +21,15 @@ func _ready() -> void:
 
 
 func apply_type() -> void:
-	visual.color = entity_data.color
+	if entity_data.sprite_frames != null:
+		animated_sprite.sprite_frames = entity_data.sprite_frames
+		animated_sprite.play("default")
+		animated_sprite.visible = true
+		visual.visible = false
+	else:
+		visual.color = entity_data.color
+		visual.visible = true
+		animated_sprite.visible = false
 
 
 func _input(event: InputEvent) -> void:

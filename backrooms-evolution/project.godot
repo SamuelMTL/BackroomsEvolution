@@ -8,16 +8,16 @@
 
 config_version=5
 
-[autoload]
-
-EntityRegistry="*res://Autoloads/EntityRegistry.gd"
-
 [application]
 
 config/name="Backrooms Evolution"
 run/main_scene="uid://qgvxnmfm1hm2"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
+
+[autoload]
+
+EntityRegistry="*res://Autoloads/EntityRegistry.gd"
 
 [display]
 
@@ -26,7 +26,6 @@ window/size/viewport_height=1920
 window/size/window_width_override=540
 window/size/window_height_override=960
 window/stretch/mode="canvas_items"
-window/stretch/aspect="keep"
 window/handheld/orientation=1
 
 [physics]

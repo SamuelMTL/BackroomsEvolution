@@ -5,7 +5,7 @@ extends Node2D
 const LittleMan = preload("res://Entitys/LittleMan.tscn")
 
 # Área jogável (dentro das paredes)
-const SPAWN_AREA := Rect2(136, 121, 814, 1683)
+const SPAWN_AREA := Rect2(117, 197, 857, 1533)
 
 @onready var spawn_timer: Timer = $SpawnTimer
 
