@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var spawn_interval: float = 10.0
+@export var spawn_interval: float = 5.0
 
 const LittleMan = preload("res://Entitys/LittleMan.tscn")
 

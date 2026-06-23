@@ -1,9 +1,11 @@
 [gd_resource type="Resource" script_class="EntityData" format=3]
 
 [ext_resource type="Script" path="res://Resources/EntityData.gd" id="1_entitydata"]
+[ext_resource type="SpriteFrames" path="res://Resources/Bacteria01Frames.tres" id="2_frames"]
 
 [resource]
 script = ExtResource("1_entitydata")
 type_name = "Bloom"
 color = Color(0.9, 0.4, 0.1, 1)
 speed = 150.0
+sprite_frames = ExtResource("2_frames")
