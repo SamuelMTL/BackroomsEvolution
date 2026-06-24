@@ -16,8 +16,7 @@ A mobile idle/merge game built in Godot 4 where creatures roam a backrooms-inspi
 | 1 | Researcher | 0.5 |
 | 2 | Bacteria Entity | 2.0 |
 | 3 | Bonestealer | 8.0 |
-| 4 | Nova | 32.0 |
-| 5 | Apex | 128.0 |
+
 
 Higher level creatures are unlocked by merging — they won't appear in the Shop until you've obtained them at least once.
 
