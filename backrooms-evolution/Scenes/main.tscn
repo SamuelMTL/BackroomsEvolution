@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://bjh4dhrgp3myu" path="res://Scenes/main.gd" id="1_main_script"]
 [ext_resource type="Texture2D" uid="uid://d4jtyh2uvdhwa" path="res://Assets/Fundo.png" id="2_fundo"]
+[ext_resource type="PackedScene" path="res://UI/MoneyUI.tscn" id="3_moneyui"]
+[ext_resource type="PackedScene" path="res://UI/ShopUI.tscn" id="4_shopui"]
+[ext_resource type="PackedScene" path="res://UI/ShopButton.tscn" id="5_shopbtn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wall_top"]
 size = Vector2(1086, 165)
@@ -49,6 +52,10 @@ position = Vector2(950, 0)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight" unique_id=1701832202]
 position = Vector2(96, 959)
 shape = SubResource("RectangleShape2D_wall_right")
+
+[node name="MoneyUI" parent="." instance=ExtResource("3_moneyui")]
+[node name="ShopUI" parent="." instance=ExtResource("4_shopui")]
+[node name="ShopButton" parent="." instance=ExtResource("5_shopbtn")]
 
 [node name="SpawnTimer" type="Timer" parent="." unique_id=1211944361]
 wait_time = 3.0

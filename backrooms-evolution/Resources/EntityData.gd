@@ -5,3 +5,4 @@ extends Resource
 @export var color: Color = Color.WHITE
 @export var speed: float = 120.0
 @export var sprite_frames: SpriteFrames = null
+@export var base_income: float = 1.0

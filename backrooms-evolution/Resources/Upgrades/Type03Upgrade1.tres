@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="UpgradeData" format=3]
+
+[ext_resource type="Script" path="res://Resources/UpgradeData.gd" id="1_upgradedata"]
+[ext_resource type="Resource" path="res://Resources/Type03.tres" id="2_entity"]
+
+[resource]
+script = ExtResource("1_upgradedata")
+entity_data = ExtResource("2_entity")
+level = 1
+multiplier = 2.0
+cost = 1600.0
+description = "Bonestealer produces 2x more income"

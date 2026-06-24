@@ -5,7 +5,8 @@
 
 [resource]
 script = ExtResource("1_entitydata")
-type_name = "Sprout"
+type_name = "Researcher"
 color = Color(0.2, 0.8, 0.4, 1)
 speed = 120.0
 sprite_frames = ExtResource("2_frames")
+base_income = 0.5

@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://br4rwhx48ql6n"]
+
+[ext_resource type="Script" uid="uid://bqmjxxfeltkb7" path="res://UI/MoneyUI.gd" id="1_moneyui"]
+
+[node name="MoneyUI" type="CanvasLayer" unique_id=682455804]
+script = ExtResource("1_moneyui")
+
+[node name="Panel" type="PanelContainer" parent="." unique_id=126618915]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 400.0
+offset_bottom = 160.0
+
+[node name="VBox" type="VBoxContainer" parent="Panel" unique_id=1688155647]
+layout_mode = 2
+
+[node name="LabelTotal" type="Label" parent="Panel/VBox" unique_id=1597710418]
+layout_mode = 2
+theme_override_font_sizes/font_size = 52
+text = " 0.0"
+
+[node name="LabelIncome" type="Label" parent="Panel/VBox" unique_id=1500240027]
+modulate = Color(0.6, 1, 0.6, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 34
+text = "+0.0/s"

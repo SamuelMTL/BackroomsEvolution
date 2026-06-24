@@ -7,3 +7,4 @@ script = ExtResource("1_entitydata")
 type_name = "Apex"
 color = Color(0.8, 0.1, 0.9, 1)
 speed = 240.0
+base_income = 128.0

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://ddkkigtggmpqg"]
+
+[node name="ShopButton" type="CanvasLayer" unique_id=881760665]
+
+[node name="Button" type="Button" parent="." unique_id=464194105]
+offset_left = 16.0
+offset_top = 180.0
+offset_right = 280.0
+offset_bottom = 260.0
+theme_override_font_sizes/font_size = 52
+text = "Shop"

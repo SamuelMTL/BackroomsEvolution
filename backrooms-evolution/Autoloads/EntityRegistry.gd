@@ -1,8 +1,11 @@
 extends Node
 
-# Adicione novos tipos aqui na ordem de evolução.
-# O jogo sempre começa spawnando types[0].
+# Add new types here in evolution order.
+# The game always starts spawning types[0].
 var types: Array[EntityData] = []
+
+# Base shop buy prices
+const BUY_PRICES: Array[float] = [15.0, 75.0, 375.0, 1875.0, 9375.0]
 
 func _ready() -> void:
 	types = [
@@ -13,8 +16,33 @@ func _ready() -> void:
 		preload("res://Resources/Type05.tres"),
 	]
 
+	var upgrades: Array[UpgradeData] = [
+		preload("res://Resources/Upgrades/Type01Upgrade1.tres"),
+		preload("res://Resources/Upgrades/Type01Upgrade2.tres"),
+		preload("res://Resources/Upgrades/Type01Upgrade3.tres"),
+		preload("res://Resources/Upgrades/Type02Upgrade1.tres"),
+		preload("res://Resources/Upgrades/Type02Upgrade2.tres"),
+		preload("res://Resources/Upgrades/Type02Upgrade3.tres"),
+		preload("res://Resources/Upgrades/Type03Upgrade1.tres"),
+		preload("res://Resources/Upgrades/Type03Upgrade2.tres"),
+		preload("res://Resources/Upgrades/Type03Upgrade3.tres"),
+		preload("res://Resources/Upgrades/Type04Upgrade1.tres"),
+		preload("res://Resources/Upgrades/Type04Upgrade2.tres"),
+		preload("res://Resources/Upgrades/Type04Upgrade3.tres"),
+		preload("res://Resources/Upgrades/Type05Upgrade1.tres"),
+		preload("res://Resources/Upgrades/Type05Upgrade2.tres"),
+		preload("res://Resources/Upgrades/Type05Upgrade3.tres"),
+	]
+
+	ShopManager.register_upgrades(upgrades)
+
+	for i in types.size():
+		ShopManager.set_base_price(types[i], BUY_PRICES[i])
+
+
 func get_starting_type() -> EntityData:
 	return types[0]
+
 
 func get_next_type(current: EntityData) -> EntityData:
 	var idx := types.find(current)

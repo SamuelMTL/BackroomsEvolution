@@ -7,3 +7,4 @@ script = ExtResource("1_entitydata")
 type_name = "Nova"
 color = Color(0.2, 0.5, 1.0, 1)
 speed = 210.0
+base_income = 32.0

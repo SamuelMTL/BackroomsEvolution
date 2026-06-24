@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bskjthmsi8tkf"
-path="res://.godot/imported/Bonestearler2.png-f312411407558763dc4be1bea8fe877d.ctex"
+uid="uid://cxtlaqm4a1d36"
+path="res://.godot/imported/Bonestealer2.png-11cc4674ad68b7fbb118fe82b78b1d5d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Bonestearler2.png"
-dest_files=["res://.godot/imported/Bonestearler2.png-f312411407558763dc4be1bea8fe877d.ctex"]
+source_file="res://Assets/Bonestealer2.png"
+dest_files=["res://.godot/imported/Bonestealer2.png-11cc4674ad68b7fbb118fe82b78b1d5d.ctex"]
 
 [params]
 

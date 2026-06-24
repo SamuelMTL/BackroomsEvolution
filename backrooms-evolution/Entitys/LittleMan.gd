@@ -18,6 +18,12 @@ func _ready() -> void:
 		entity_data = EntityRegistry.get_starting_type()
 	apply_type()
 	pick_random_direction()
+	MoneyManager.register(entity_data)
+
+
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_PREDELETE:
+		MoneyManager.unregister(entity_data)
 
 
 func apply_type() -> void:
@@ -96,6 +102,7 @@ func try_merge() -> void:
 		new_entity.entity_data = next_type
 		new_entity.position = mid
 		get_parent().add_child(new_entity)
+		ShopManager.unlock_type(next_type)
 		return
 
 
