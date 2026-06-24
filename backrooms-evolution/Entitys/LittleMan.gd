@@ -16,6 +16,7 @@ var _merging := false
 func _ready() -> void:
 	if entity_data == null:
 		entity_data = EntityRegistry.get_starting_type()
+	add_to_group("entities")
 	apply_type()
 	pick_random_direction()
 	MoneyManager.register(entity_data)
