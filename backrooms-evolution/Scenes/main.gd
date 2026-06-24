@@ -1,6 +1,7 @@
 extends Node2D
 
 @export var spawn_interval: float = 5.0
+@export var entity_limit: int = 10
 
 const LittleMan = preload("res://Entitys/LittleMan.tscn")
 const SPAWN_AREA := Rect2(117, 197, 857, 1533)
@@ -25,7 +26,13 @@ func _on_entity_purchased(entity_data: EntityData) -> void:
 	_spawn_entity(entity_data)
 
 
+func _get_entity_count() -> int:
+	return get_tree().get_nodes_in_group("entities").size()
+
+
 func _spawn_entity(entity_data: EntityData) -> void:
+	if _get_entity_count() >= entity_limit:
+		return
 	var little_man := LittleMan.instantiate()
 	little_man.entity_data = entity_data
 	little_man.position = Vector2(
